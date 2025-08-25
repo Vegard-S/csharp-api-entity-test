@@ -14,11 +14,11 @@ namespace workshop.wwwapi.Models
         [Column("booking")]
         public DateTime Booking { get; set; }
         [Column("doctor")]
-        [ForeignKey("Doctor")]
+        [ForeignKey(nameof(Doctor))]
         public int DoctorId { get; set; }
         public Doctor Doctor { get; set; }
         [Column("patient")]
-        [ForeignKey("Patient")]
+        [ForeignKey(nameof(Patient))]
         public int PatientId { get; set; }
         public Patient Patient { get; set; }
 
